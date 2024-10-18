@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "root",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "workspaces": {
     "packages": [
       "packages/*",
@@ -9,7 +9,6 @@
     ]
   },
   "scripts": {
-    "prepare": "husky install",
     "watch": "lerna run watch --parallel",
     "watch:demo": "nodemon --watch \"./packages/*/lib/**/*.*\" --exec \"yarn start --no-open\"",
     "build": "yarn build-packages && yarn build-demo",
