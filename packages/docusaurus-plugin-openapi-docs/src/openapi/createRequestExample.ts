@@ -214,6 +214,10 @@ function primitive(schema: SchemaObject = {}) {
     return;
   }
 
+  if (format === undefined) {
+    return type;
+  }
+
   let fn = schema.default ? () => schema.default : primitives[type].default;
 
   if (format !== undefined) {
